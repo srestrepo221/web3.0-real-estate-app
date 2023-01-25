@@ -18,7 +18,6 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
 
     const fetchDetails = async () => {
         // -- Buyer
-
         const buyer = await escrow.buyer(home.id)
         setBuyer(buyer)
 
@@ -26,7 +25,6 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
         setHasBought(hasBought)
 
         // -- Seller
-
         const seller = await escrow.seller()
         setSeller(seller)
 
@@ -34,7 +32,6 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
         setHasSold(hasSold)
 
         // -- Lender
-
         const lender = await escrow.lender()
         setLender(lender)
 
@@ -42,7 +39,6 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
         setHasLended(hasLended)
 
         // -- Inspector
-
         const inspector = await escrow.inspector()
         setInspector(inspector)
 
